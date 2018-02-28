@@ -2,3 +2,4 @@
 */migrations/*
 .vscode/settings.json
 db.sqlite3
+*.bak
