@@ -1,0 +1,27 @@
+header {
+    padding: 10px 10px 0px 10px;
+}
+.navi-link {
+    position: relative;
+    font-size: 24px;
+    padding: 20px;
+    bottom: 10px;
+}
+.form-1 label, input {
+    display: block;
+}
+.form-1 input[type="text"], input[type="url"] {
+    width: 300px;
+}
+.form-1 button {
+    margin: auto 0;
+}
+table, form {
+    padding: 20px;
+}
+th, td {
+    padding-right: 20px;
+}
+tr:nth-child(2n) {
+    background: rgb(240,240,240);
+}

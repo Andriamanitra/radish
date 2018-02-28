@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="{% url 'add_station' %}" method="post" class="form-1">
+    <h1>Add a new station</h1>
+    {% csrf_token %}
+    <label for="name-input">Name</label>
+    <input type="text" name="name" id="name-input">
+    <label for="description-input">Description</label>
+    <input type="text" name="description" id="description-input">
+    <label for="url-input">Link to stream (for example .m3u or .pls)</label>
+    <input type="url" name="url" id="url-input">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

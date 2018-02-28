@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Links</th>
+    </thead>
+    <tbody>{% for station in stations %}
+        <tr>
+            <td><h3>{{ station.name }}</h3></td>
+            <td>{{ station.description }}</td>
+            <td>{% for s_url in station.urls.all %}<a href="{{ s_url.url }}">{{ s_url.extension }}</a> {% endfor%}
+            </td>
+        </tr>{% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

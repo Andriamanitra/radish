@@ -1,0 +1,18 @@
+<!DOCTYPE html>{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radish</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'stations/styles.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'index' %}"><img alt="logo" src="{% static 'stations/logo.png' %}"></a>
+        <a class="navi-link" href="{% url 'index' %}">Stations</a>
+        <a class="navi-link" href="{% url 'add_station' %}">Add new station</a>
+        <a class="navi-link" href="/admin">Admin panel</a>
+    </header>
+    {% block content %}{% endblock %}
+</body>
+</html>
