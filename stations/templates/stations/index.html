@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<table>
+<table class="stations-table">
     <thead>
         <th>Name</th>
         <th>Description</th>
         <th>Links</th>
+        <th></th>
     </thead>
     <tbody>{% for station in stations %}
         <tr>
-            <td><h3>{{ station.name }}</h3></td>
-            <td>{{ station.description }}</td>
-            <td>{% for s_url in station.urls.all %}<a href="{{ s_url.url }}">{{ s_url.extension }}</a> {% endfor%}
+            <td><div class="station-name">{{ station.name }}</div></td>
+            <td>{{ station.description|urlize }}</td>
+            <td>{% for s_url in station.urls.all %}
+                <a href="{{ s_url.url }}">{{ s_url.extension }}</a> {% endfor%}
             </td>
+            <td><a href="{% url 'add-url' station_id=station.id %}"><button id="button-1">+</button></a></td>
         </tr>{% endfor %}
+        <tr><td id="cell-button-2"><a href="{% url 'add-station' %}"><button id="button-2">+</button></a></td></tr>
     </tbody>
 </table>
 

@@ -19,9 +19,30 @@ header {
 table, form {
     padding: 20px;
 }
-th, td {
-    padding-right: 20px;
+.stations-table th {
+    background: rgb(200,200,200);
 }
-tr:nth-child(2n) {
-    background: rgb(240,240,240);
+.stations-table th, td {
+    padding-right: 20px;
+    max-width: 450px;
+    overflow-wrap: break-word;
+}
+.stations-table td:last-child {
+    padding-right: 0px;
+}
+.stations-table tr:nth-child(2n) {
+    background: rgb(230,230,230);
+}
+.station-name {
+    padding: 3px;
+    font-weight: 600;
+}
+#button-1 {
+    right: 0;
+}
+#button-2 {
+    width: 40px;
+}
+#cell-button-2 {
+    text-align: center;
 }
